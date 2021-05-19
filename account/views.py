@@ -20,3 +20,6 @@ class ActivateView(TemplateView):
         result = activate_user(uidb64, token)
         # コンテクストのresultにTrue/Falseの結果を渡します。
         return super().get(request, result=result, **kwargs)
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
